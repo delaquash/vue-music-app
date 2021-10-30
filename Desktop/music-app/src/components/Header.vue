@@ -20,14 +20,15 @@
       </header>
 </template>
 
-
-
 <script>
 export default {
   name: 'Header',
   methods: {
-    
-  }
-}
+    toggleAuthModal () {
+      this.$store.state.authModalShow = !this.$store.state.authModalShow;
+      console.log(this.$store.state.authModalShow);
+    },
+  },
+};
 </script>
 
