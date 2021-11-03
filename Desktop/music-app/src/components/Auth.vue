@@ -1,3 +1,4 @@
+/*eslint linebreak-style: ["error", "windows"]*/
 <template>
   <div>
     <h1>Hello</h1>
