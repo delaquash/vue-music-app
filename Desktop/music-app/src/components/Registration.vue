@@ -83,7 +83,7 @@
 </template>
 
 <script>
-import firebase from '@/includes/firebase';
+import { auth } from '@/includes/firebase';
 
 export default {
   name: 'RegistrationForm',
@@ -117,9 +117,8 @@ export default {
       // Email and password auth using firebase
       let userCredentials = null;
       try {
-        userCredentials = await firebase.auth().createUserWithEmailAndPassword(
-          values.email,
-          values.password,
+        userCredentials = await auth.createUserWithEmailAndPassword(
+          values.email, values.password,
         );
       } catch (error) {
         this.reg_in_submission = false;
